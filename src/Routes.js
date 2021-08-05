@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Test from '../src/components/test';
+import InfinitySlide from './components/infinitySlide';
 
 class Routes extends Component {
   render() {
@@ -8,6 +9,7 @@ class Routes extends Component {
       <Router>
         <Switch>
           <Route exact path="/" component={Test} />
+          <Route exact path="/infinitySlide" component={InfinitySlide} />
         </Switch>
       </Router>
     );
