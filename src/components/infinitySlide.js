@@ -47,7 +47,7 @@ const SlideButtonContainer = styled.div`
 
   button {
     all: unset;
-    color: red;
+    color: blue;
   }
 `;
 
