@@ -3,6 +3,28 @@ import styled from 'styled-components';
 import ReactPlayer from 'react-player';
 
 export const Continueplay = () => {
+  const play = data => {
+    const streaming = id => {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          console.log(data[id].id);
+          resolve();
+        }, data[id - 1].time);
+      });
+    };
+    if (data.length === 1) {
+      console.log(data.time);
+    } else {
+      console.log(data[0].id);
+      const plat = async () => {
+        for (let i = 1; i < data.length; i++) {
+          await streaming(i);
+        }
+      };
+      plat();
+    }
+  };
+
   return (
     <div>
       <ReactPlayer
